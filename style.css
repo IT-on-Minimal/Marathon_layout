@@ -1,0 +1,64 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Учет padding в ширине и высоте */
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%; /* Чтобы каждый блок занимал всю высоту экрана */
+  background-color: #1f1f1f;
+  scroll-behavior: smooth;
+}
+
+img {
+  border: 2px solid rgb(0, 0, 0);
+}
+#toster {
+  color: #ffffff;
+}
+.section {
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 20px;
+  width: 100vw; /* Ширина блока - вся ширина экрана */
+  height: 100vh; /* Высота блока - вся высота экрана */
+  font-size: 2rem; /* Размер текста */
+  width: 100vw; /* Ширина блока - вся ширина экрана */
+  min-height: 100vh; /* Высота блока - вся высота экрана */
+  color: white;
+  font-size: 2rem;
+}
+
+h4 {
+  margin-top: 30px;
+}
+
+#block_1 {
+  background-color: rgb(0, 30, 65);
+}
+#block_2 {
+  background-color: rgb(0, 68, 100);
+}
+#block_3 {
+  background-color: rgb(0, 80, 133);
+}
+ol,
+ul {
+  margin-top: 50px;
+}
+ul {
+  color: rgb(0, 255, 200);
+}
+li {
+  font-size: 0.5em;
+  margin-top: 10px;
+  color: rgb(0, 204, 255);
+}
+
+a {
+  color: blue;
+}

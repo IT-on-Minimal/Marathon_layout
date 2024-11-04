@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>PortFolio</title>
+  </head>
+  <body>
+    <!--<img src="/Torin.png" />-->
+    <div class="section" id="block_1">
+      <h4>Меню</h4>
+      <ul>
+        <li><a href="#Фильмы">Фильмы</a></li>
+        <li><a href="#Вкусняшки">Вкусняшки</a></li>
+        <li><a href="#Любимые">Любимые сочетания</a></li>
+      </ul>
+
+      <h4 id="Фильмы">Фильмы</h4>
+      <ul>
+        Жанры:
+        <ol>
+          Фентези:
+          <li>ВЛАСТЕЛИН КОЛЕЦ</li>
+          <li>ГАРРИ ПОТТЕР</li>
+        </ol>
+        <ol>
+          Фантастика:
+          <li>ЗВЕЗДНЫЕ ВОЙНЫ</li>
+          <li>СТРАЖИ ГАЛАКТИКИ</li>
+        </ol>
+        <ol>
+          Ужасы:
+          <li>ПАРАНОРМАЛЬНОЕ ЯЛВЕНИЕ</li>
+          <li>АСТРАЛ</li>
+        </ol>
+      </ul>
+    </div>
+    <div class="section" id="block_2">
+      <h4 id="Вкусняшки"><button>Еда под кино</button></h4>
+      <ul>
+        <li>Поп корн</li>
+        <li>Пицца</li>
+        <li>Бургер</li>
+        <li>Чипсы</li>
+        <li>Мороженное</li>
+        <li>Чай с печеньками</li>
+        <li>Сушы</li>
+      </ul>
+    </div>
+    <div class="section" id="block_3">
+      <h4 id="Любимые">Любимое кино</h4>
+      <input type="text" placeholder="Введите любимый фильм" name="q" /> <br />
+      <hr />
+
+      <label
+        >Любимая еда под кино
+        <input
+          type="text"
+          placeholder="Введите любимую еду для просмотра кинои"
+          name="q"
+        />
+      </label>
+
+      <form action="https://google.com/search" method="get">
+        <label>
+          Поисковый запрос
+          <input type="text" placeholder="Напиши свой вопрос" name="q" />
+        </label>
+        <button type="submit">Поиск</button>
+        <button type="reset">Очистить форму</button>
+      </form>
+    </div>
+  </body>
+</html>

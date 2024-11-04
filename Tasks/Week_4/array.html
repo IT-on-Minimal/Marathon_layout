@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Методы массивов в JavaScript</title>
+    <style>
+      body {
+        font-family: "Press Start 2P", cursive;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #000;
+        color: #fff;
+      }
+      .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+      }
+      .methods {
+        padding: 20px;
+        background-color: #1a1a1a;
+        border: 3px solid #00ff00;
+        width: 300px;
+        text-align: center;
+        margin: 0 auto;
+      }
+      input {
+        margin-bottom: 10px;
+        padding: 10px;
+        width: 80%;
+        background-color: #333;
+        color: #fff;
+        border: none;
+      }
+      button {
+        display: block;
+        margin: 0 auto;
+        margin-bottom: 10px;
+        padding: 10px;
+        background-color: #ff0066;
+        color: white;
+        border: none;
+        cursor: pointer;
+        width: 200px;
+      }
+      button:hover {
+        background-color: #ff6699;
+      }
+      .result {
+        padding: 20px;
+        background-color: #1a1a1a;
+        border: 3px solid #00ffff;
+        width: 300px;
+        text-align: center;
+      }
+      pre {
+        background-color: #333;
+        color: #00ff00;
+        padding: 10px;
+        white-space: pre-wrap; /* Автоматический перенос */
+        word-wrap: break-word; /* Перенос длинных слов */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="methods">
+        <input id="inputNumber" type="number" placeholder="Введите число" />
+        <button onclick="runPush()">Добавить (push)</button>
+        <button onclick="runPop()">Удалить последний (pop)</button>
+        <button onclick="runUnshift()">Добавить в начало (unshift)</button>
+        <button onclick="runShift()">Удалить первый (shift)</button>
+        <button onclick="runSplice()">Удалить по индексу (splice)</button>
+      </div>
+
+      <div class="result">
+        <h2>Метод:</h2>
+        <pre id="methodOutput">Метод: не применён - Пока нет методов.</pre>
+        <h2>Результат:</h2>
+        <pre id="resultOutput">[1, 2, 3]</pre>
+      </div>
+    </div>
+
+    <script>
+      let arr = [1, 2, 3];
+
+      function getNumberInput() {
+        return parseInt(document.getElementById("inputNumber").value);
+      }
+
+      function displayMethod(methodName, description) {
+        document.getElementById(
+          "methodOutput"
+        ).textContent = `Метод: ${methodName} - ${description}`;
+      }
+
+      function displayResult(result) {
+        document.getElementById("resultOutput").textContent =
+          JSON.stringify(result);
+      }
+
+      function runPush() {
+        const num = getNumberInput();
+        if (!isNaN(num)) {
+          arr.push(num);
+          displayMethod("push", "Добавляет элемент в конец массива.");
+          displayResult(arr);
+        } else {
+          alert("Пожалуйста, введите корректное число");
+        }
+      }
+
+      function runPop() {
+        arr.pop();
+        displayMethod("pop", "Удаляет последний элемент массива.");
+        displayResult(arr);
+      }
+
+      function runShift() {
+        arr.shift();
+        displayMethod("shift", "Удаляет первый элемент массива.");
+        displayResult(arr);
+      }
+
+      function runUnshift() {
+        const num = getNumberInput();
+        if (!isNaN(num)) {
+          arr.unshift(num);
+          displayMethod("unshift", "Добавляет элемент в начало массива.");
+          displayResult(arr);
+        } else {
+          alert("Пожалуйста, введите корректное число");
+        }
+      }
+
+      function runSplice() {
+        const num = getNumberInput();
+        if (!isNaN(num) && num >= 0 && num < arr.length) {
+          arr.splice(num, 1); // Удаляет элемент с указанного индекса
+          displayMethod("splice", "Удаляет элемент по индексу.");
+          displayResult(arr);
+        } else {
+          alert("Пожалуйста, введите корректный индекс");
+        }
+      }
+
+      // Начальный вывод
+      displayResult(arr);
+    </script>
+
+    <!-- Подключаем пиксельный шрифт -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
+  </body>
+</html>

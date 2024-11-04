@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Custom Cursor</title>
+    <style>
+      /* Применяем кастомизированный курсор ко всему документу */
+      * {
+        cursor: url("/gram.png"), pointer; /* Замените путь на путь к вашему изображению курсора */
+      }
+
+      ::selection {
+        background-color: #ffcc00; /* Цвет фона при выделении */
+        color: #ffffff; /* Цвет текста при выделении */
+      }
+
+      p {
+        margin: 200px;
+        white-space: pre-wrap; /* Сохраняет переносы строк и пробелы, как в коде */
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti magnam
+      quisquam fuga obcaecati temporibus alias! Optio, fuga recusandae. At
+      asperiores repellendus similique consectetur veniam error omnis accusamus,
+      id molestiae perferendis.
+    </p>
+  </body>
+</html>
